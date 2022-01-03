@@ -23,15 +23,10 @@
     Name: <form:input path="name"/><br> <!--к каждом форме срабатывает путтер-->
     Surname: <form:input path="surname"/><br>
     Salary: <form:input path="salary"/><br><br>
+
     Department <form:select path="department">
-    <!-- при выпад. списке label со значением value -->
-   <!--
-    <form:option value="Information Technology" label="IT"/> -->
-    <form:option value="Human Resouses" label="HR"/>
-    <form:option value="Sales" label="Sales"/>
-
-
-</form:select><br><br>
+    <form:options items="${employee.departments}"/>
+    </form:select><br><br>
 
     <input type="submit" value="OK"/>
 </form:form>
