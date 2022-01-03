@@ -8,8 +8,9 @@ public class Employee {
     private String surname;
     private int salary;
     private String department;
-    private String carBrant;
+    private String carBrand;
     private Map<String,String> departments;
+
 
     public Employee() {
         departments=new HashMap<>();
@@ -58,13 +59,17 @@ public class Employee {
         this.departments = departments;
     }
 
-    public String getCarBrant() {
-        return carBrant;
+    public String getCarBrand() {
+        return carBrand;
     }
 
-    public void setCarBrant(String carBrant) {
-        this.carBrant = carBrant;
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
     }
+
+
+
+
 
     @Override
     public String toString() {
