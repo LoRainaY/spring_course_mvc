@@ -20,15 +20,19 @@
     <!--к каждом форме срабатывает геттер, и первоначально
     значения null,null и 0. После нажатия кнопки типа submit
     вызываются сеттеры, которые устанавл. значения с форм-->
-    Name: <form:input path="name"/><br> <!--к каждом форме срабатывает путтер-->
-    Surname: <form:input path="surname"/><br>
+    Name: <form:input path="name"/><br><br> <!--к каждом форме срабатывает геттер-->
+    Surname: <form:input path="surname"/><br><br>
     Salary: <form:input path="salary"/><br><br>
 
     Department <form:select path="department">
     <form:options items="${employee.departments}"/>
     </form:select><br><br>
-    Witch car do you want?<br>
-    <form:radiobuttons items="${employee.carBrands}" path="carBrand"/>
+    Witch car do you want?<br><br>
+    <form:radiobuttons items="${employee.carBrands}" path="carBrand"/><br><br>
+    Foreign language:<br>
+    EN<form:checkbox path="languages" value="English"/>
+    DE<form:checkbox path="languages" value="Deutch"/>
+    FR<form:checkbox path="languages" value="French"/><br><br>
 
     <input type="submit" value="OK"/>
 </form:form>
