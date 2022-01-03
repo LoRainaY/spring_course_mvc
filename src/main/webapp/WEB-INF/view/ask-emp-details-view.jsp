@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Яна
@@ -5,7 +6,7 @@
   Time: 22:11
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <title>Title</title>
@@ -15,12 +16,16 @@
 <h2>Dear Employee, Please enter your details</h2>
 <br>
 <br>
-<form action="showDetails" method="get">
-    <input type="text" name="employeeName"
-    placeholder="Write your name"/>
+<form:form action="showDetails" modelAttribute="employee">
+    <!--к каждом форме срабатывает геттер, и первоначально
+    значения null,null и 0. После нажатия кнопки типа submit
+    вызываются сеттеры, которые устанавл. значения с форм-->
+    Name: <form:input path="name"/><br> <!--к каждом форме срабатывает путтер-->
+    Surname: <form:input path="surname"/><br>
+    Salary: <form:input path="salary"/><br><br>
 
-    <input type="submit"/>
-</form>
+    <input type="submit" value="OK"/>
+</form:form>
 
 </body>
 </html>
