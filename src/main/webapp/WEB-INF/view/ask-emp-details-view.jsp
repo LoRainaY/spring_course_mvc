@@ -28,10 +28,7 @@
     <form:options items="${employee.departments}"/>
     </form:select><br><br>
     Witch car do you want?<br>
-    <form:radiobutton path="carBrand" value="BMW"/>BMW
-    <form:radiobutton path="carBrand" value="Audi"/>Audi
-    <form:radiobutton path="carBrand" value="Toyota"/>Toyota<br><br>
-
+    <form:radiobuttons items="${employee.carBrands}" path="carBrand"/>
 
     <input type="submit" value="OK"/>
 </form:form>
