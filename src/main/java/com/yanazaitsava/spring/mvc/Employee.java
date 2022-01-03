@@ -2,6 +2,7 @@ package com.yanazaitsava.spring.mvc;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Employee {
     private String name;
@@ -17,6 +18,8 @@ public class Employee {
 
     private String[] languages;
 
+    private Map<String,String> languageList;
+
 
 
     public Employee() {
@@ -29,6 +32,12 @@ public class Employee {
         carBrands.put("BMW","BMW");
         carBrands.put("Audi","Audi");
         carBrands.put("Mercedes-Benz","MB");
+
+        languageList=new TreeMap<>();
+        languageList.put("English","EN");
+        languageList.put("Deutch","DE");
+        languageList.put("French","FR");
+
     }
 
     public String getName() {
@@ -93,6 +102,14 @@ public class Employee {
 
     public void setLanguages(String[] languages) {
         this.languages = languages;
+    }
+
+    public Map<String, String> getLanguageList() {
+        return languageList;
+    }
+
+    public void setLanguageList(Map<String, String> languageList) {
+        this.languageList = languageList;
     }
 
     @Override

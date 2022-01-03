@@ -30,10 +30,9 @@
     Witch car do you want?<br><br>
     <form:radiobuttons items="${employee.carBrands}" path="carBrand"/><br><br>
     Foreign language:<br>
-    EN<form:checkbox path="languages" value="English"/>
-    DE<form:checkbox path="languages" value="Deutch"/>
-    FR<form:checkbox path="languages" value="French"/><br><br>
-
+    
+    <form:checkboxes path="languages" items="${employee.languageList}"/>
+   
     <input type="submit" value="OK"/>
 </form:form>
 
