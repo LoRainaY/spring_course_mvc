@@ -12,7 +12,7 @@ public class Employee {
 
     public Employee() {
         departments=new HashMap<>();
-        departments.put("IT","Information Technology");
+        departments.put("IT","Information Technology");// первое значение выводится, второе показывается в выпад. списке
         departments.put("HR","Human Resources");
         departments.put("Sales","Sales");
     }
