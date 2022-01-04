@@ -9,7 +9,7 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Spring MVC</title>
 </head>
 <body>
 
@@ -20,10 +20,13 @@
     <!--к каждом форме срабатывает геттер, и первоначально
     значения null,null и 0. После нажатия кнопки типа submit
     вызываются сеттеры, которые устанавл. значения с форм-->
-    Name: <form:input path="name"/><br><br> <!--к каждом форме срабатывает геттер-->
-    Surname: <form:input path="surname"/><br><br>
+    Name: <form:input path="name"/> <!--к каждом форме срабатывает геттер-->
+    <span style="color: red; "><form:errors path="name"/></span><!--устан. формы для вывода ошибки и измен. ее цвета-->
+    <br><br>
+    Surname: <form:input path="surname"/>
+    <span style="color: red; "><form:errors path="surname"/></span> <!--устан. формы для вывода ошибки и измен. ее цвета-->
+    <br><br>
     Salary: <form:input path="salary"/><br><br>
-
     Department <form:select path="department">
     <form:options items="${employee.departments}"/>
     </form:select><br><br>
