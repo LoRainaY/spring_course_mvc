@@ -26,16 +26,22 @@
     Surname: <form:input path="surname"/>
     <span style="color: red; "><form:errors path="surname"/></span> <!--устан. формы для вывода ошибки и измен. ее цвета-->
     <br><br>
-    Salary: <form:input path="salary"/><br><br>
+    Salary: <form:input path="salary"/>
+    <span style="color: red; "><form:errors path="salary"/></span>
+    <br><br>
     Department <form:select path="department">
     <form:options items="${employee.departments}"/>
     </form:select><br><br>
     Witch car do you want?<br><br>
     <form:radiobuttons items="${employee.carBrands}" path="carBrand"/><br><br>
+
     Foreign language:<br>
-    
-    <form:checkboxes path="languages" items="${employee.languageList}"/>
-   
+    <form:checkboxes path="languages" items="${employee.languageList}"/><br><br>
+
+    Tel: <form:input path="phoneNumber"/> <!--к каждом форме срабатывает геттер-->
+    <span style="color: red; "><form:errors path="phoneNumber"/></span><!--устан. формы для вывода ошибки и измен. ее цвета-->
+    <br><br>
+
     <input type="submit" value="OK"/>
 </form:form>
 
