@@ -41,6 +41,9 @@
     Tel: <form:input path="phoneNumber"/> <!--к каждом форме срабатывает геттер-->
     <span style="color: red; "><form:errors path="phoneNumber"/></span><!--устан. формы для вывода ошибки и измен. ее цвета-->
     <br><br>
+    Email: <form:input path="email"/> <!--к каждом форме срабатывает геттер-->
+    <span style="color: red; "><form:errors path="email"/></span><!--устан. формы для вывода ошибки и измен. ее цвета-->
+    <br><br>
 
     <input type="submit" value="OK"/>
 </form:form>
